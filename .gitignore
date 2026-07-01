@@ -48,3 +48,4 @@ experiments/logs/*.log
 # Secrets
 .env
 *.key
+*.log

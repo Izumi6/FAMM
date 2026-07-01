@@ -122,9 +122,9 @@ class TestHeuristicScorer:
 class TestLearnedScoringModel:
     """Test the trainable MLP scoring model."""
 
-    def test_untrained_model_fallback(self) -> None:
+    def test_untrained_model_fallback(self, tmp_path) -> None:
         """Untrained model should use mean of features as fallback."""
-        config = LearnedScorerConfig(model_path="/tmp/test_model.pkl")
+        config = LearnedScorerConfig(model_path=str(tmp_path / "test_model.pkl"))
         model = LearnedScoringModel(config)
 
         features = [0.8, 0.6, 0.4, 0.2, 0.0]
@@ -133,10 +133,10 @@ class TestLearnedScoringModel:
         # Mean of [0.8, 0.6, 0.4, 0.2, 0.0] = 0.4
         assert score == pytest.approx(0.4)
 
-    def test_add_training_example(self) -> None:
+    def test_add_training_example(self, tmp_path) -> None:
         """Training examples should accumulate in the buffer."""
         config = LearnedScorerConfig(
-            model_path="/tmp/test_model.pkl",
+            model_path=str(tmp_path / "test_model.pkl"),
             retrain_interval_steps=1000,  # High to prevent auto-retrain
         )
         model = LearnedScoringModel(config)
@@ -146,9 +146,9 @@ class TestLearnedScoringModel:
 
         assert len(model.training_buffer) == 2
 
-    def test_training_with_insufficient_data(self) -> None:
+    def test_training_with_insufficient_data(self, tmp_path) -> None:
         """Training with < 10 samples should return insufficient_data."""
-        config = LearnedScorerConfig(model_path="/tmp/test_model.pkl")
+        config = LearnedScorerConfig(model_path=str(tmp_path / "test_model.pkl"))
         model = LearnedScoringModel(config)
 
         for i in range(5):
@@ -157,9 +157,9 @@ class TestLearnedScoringModel:
         result = model.train()
         assert result["status"] == "insufficient_data"
 
-    def test_training_with_sufficient_data(self) -> None:
+    def test_training_with_sufficient_data(self, tmp_path) -> None:
         """Training with >= 10 samples should produce a trained model."""
-        config = LearnedScorerConfig(model_path="/tmp/test_model.pkl")
+        config = LearnedScorerConfig(model_path=str(tmp_path / "test_model.pkl"))
         model = LearnedScoringModel(config)
 
         # Generate synthetic training data

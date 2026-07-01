@@ -186,9 +186,9 @@ class ChromaAdapter(VectorStoreAdapter):
         for i in range(len(results["ids"])):
             record: dict[str, Any] = {
                 "id": results["ids"][i],
-                "document": results["documents"][i] if results["documents"] else "",
-                "metadata": results["metadatas"][i] if results["metadatas"] else {},
-                "embedding": results["embeddings"][i] if results["embeddings"] else [],
+                "metadata": results["metadatas"][i] if results.get("metadatas") is not None else {},
+                "embedding": results["embeddings"][i] if results.get("embeddings") is not None else [],
+                "document": results["documents"][i] if results.get("documents") is not None else "",
             }
             output.append(record)
 
