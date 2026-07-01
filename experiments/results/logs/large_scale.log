@@ -1,0 +1,8 @@
+2026-07-01 18:20:45,226 [large_scale] INFO: --- Running Benchmark for N=1000 (Seeds: 2) ---
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-07-01 18:20:47,255 [huggingface_hub.utils._http] WARNING: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 21168.82it/s]
+2026-07-01 18:23:41,904 [large_scale] INFO: --- Running Benchmark for N=5000 (Seeds: 2) ---
+2026-07-01 18:38:13,596 [large_scale] INFO: --- Running Benchmark for N=10000 (Seeds: 2) ---
+2026-07-01 19:07:35,459 [large_scale] INFO: --- Running Benchmark for N=5000 (Seeds: 2) ---
+2026-07-01 19:36:14,018 [large_scale] INFO: Experiments complete.

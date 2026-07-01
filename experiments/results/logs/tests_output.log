@@ -1,0 +1,108 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.11.15, pytest-9.1.1, pluggy-1.6.0 -- /Users/suyash/FAMM IEEE/venv/bin/python3.11
+cachedir: .pytest_cache
+rootdir: /Users/suyash/FAMM IEEE
+configfile: pyproject.toml
+plugins: cov-7.1.0, anyio-4.14.1, asyncio-1.4.0
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 82 items
+
+tests/integration/test_end_to_end.py::TestWriteReadFlow::test_store_and_retrieve PASSED [  1%]
+tests/integration/test_end_to_end.py::TestWriteReadFlow::test_store_multiple_and_rank PASSED [  2%]
+tests/integration/test_end_to_end.py::TestWriteReadFlow::test_get_by_id PASSED [  3%]
+tests/integration/test_end_to_end.py::TestUtilityPrediction::test_goal_aligned_memory_gets_higher_utility PASSED [  4%]
+tests/integration/test_end_to_end.py::TestDecayCycle::test_decay_reduces_utility PASSED [  6%]
+tests/integration/test_end_to_end.py::TestReinforcement::test_reinforce_increases_utility PASSED [  7%]
+tests/integration/test_end_to_end.py::TestGoalAwareRetrieval::test_goal_aware_retrieval PASSED [  8%]
+tests/integration/test_end_to_end.py::TestStats::test_get_stats PASSED   [  9%]
+tests/unit/test_event_bus.py::TestEventBusSubscription::test_subscribe_and_publish PASSED [ 10%]
+tests/unit/test_event_bus.py::TestEventBusSubscription::test_multiple_handlers PASSED [ 12%]
+tests/unit/test_event_bus.py::TestEventBusSubscription::test_unsubscribe PASSED [ 13%]
+tests/unit/test_event_bus.py::TestEventBusSubscription::test_unsubscribe_unknown_handler_raises PASSED [ 14%]
+tests/unit/test_event_bus.py::TestEventBusResilience::test_handler_exception_does_not_break_bus PASSED [ 15%]
+tests/unit/test_event_bus.py::TestEventBusResilience::test_publish_with_no_handlers PASSED [ 17%]
+tests/unit/test_event_bus.py::TestEventBusResilience::test_event_count PASSED [ 18%]
+tests/unit/test_event_bus.py::TestEventBusResilience::test_clear PASSED  [ 19%]
+tests/unit/test_event_bus.py::TestEventBusResilience::test_handler_count PASSED [ 20%]
+tests/unit/test_lifecycle_controller.py::TestLifecycleEvaluation::test_healthy_memory_no_transition PASSED [ 21%]
+tests/unit/test_lifecycle_controller.py::TestLifecycleEvaluation::test_very_low_utility_triggers_deletion PASSED [ 23%]
+tests/unit/test_lifecycle_controller.py::TestLifecycleEvaluation::test_low_utility_old_memory_goes_stale PASSED [ 24%]
+tests/unit/test_lifecycle_controller.py::TestLifecycleEvaluation::test_very_low_utility_very_old_goes_archived PASSED [ 25%]
+tests/unit/test_lifecycle_controller.py::TestLifecycleEvaluation::test_stale_memory_with_recovered_utility_reactivates PASSED [ 26%]
+tests/unit/test_lifecycle_controller.py::TestLifecycleEvaluation::test_deleted_memory_no_transition PASSED [ 28%]
+tests/unit/test_lifecycle_controller.py::TestLifecycleApplication::test_apply_transition_updates_state PASSED [ 29%]
+tests/unit/test_lifecycle_controller.py::TestLifecycleApplication::test_apply_transition_publishes_event PASSED [ 30%]
+tests/unit/test_lifecycle_controller.py::TestLifecycleApplication::test_evaluate_and_apply_returns_true_on_transition PASSED [ 31%]
+tests/unit/test_lifecycle_controller.py::TestLifecycleApplication::test_evaluate_and_apply_returns_false_when_no_transition PASSED [ 32%]
+tests/unit/test_lifecycle_controller.py::TestReactivation::test_reactivate_stale_memory PASSED [ 34%]
+tests/unit/test_lifecycle_controller.py::TestReactivation::test_reactivate_archived_memory PASSED [ 35%]
+tests/unit/test_lifecycle_controller.py::TestReactivation::test_no_reactivation_for_active_memory PASSED [ 36%]
+tests/unit/test_memory_record.py::TestMemoryRecordConstruction::test_create_with_defaults PASSED [ 37%]
+tests/unit/test_memory_record.py::TestMemoryRecordConstruction::test_create_with_custom_values PASSED [ 39%]
+tests/unit/test_memory_record.py::TestMemoryRecordConstruction::test_unique_ids PASSED [ 40%]
+tests/unit/test_memory_record.py::TestMemoryRecordConstruction::test_timestamp_is_utc PASSED [ 41%]
+tests/unit/test_memory_record.py::TestMemoryRecordValidation::test_empty_content_rejected PASSED [ 42%]
+tests/unit/test_memory_record.py::TestMemoryRecordValidation::test_utility_score_bounds PASSED [ 43%]
+tests/unit/test_memory_record.py::TestMemoryRecordValidation::test_valid_utility_boundaries PASSED [ 45%]
+tests/unit/test_memory_record.py::TestMemoryRecordValidation::test_access_count_non_negative PASSED [ 46%]
+tests/unit/test_memory_record.py::TestMemoryRecordMutations::test_record_access PASSED [ 47%]
+tests/unit/test_memory_record.py::TestMemoryRecordMutations::test_reinforce_increases_utility PASSED [ 48%]
+tests/unit/test_memory_record.py::TestMemoryRecordMutations::test_reinforce_clamps_at_one PASSED [ 50%]
+tests/unit/test_memory_record.py::TestMemoryRecordMutations::test_apply_decay_decreases_utility PASSED [ 51%]
+tests/unit/test_memory_record.py::TestMemoryRecordMutations::test_apply_decay_clamps_at_zero PASSED [ 52%]
+tests/unit/test_memory_record.py::TestMemoryRecordStateTransitions::test_active_to_stale PASSED [ 53%]
+tests/unit/test_memory_record.py::TestMemoryRecordStateTransitions::test_active_to_archived PASSED [ 54%]
+tests/unit/test_memory_record.py::TestMemoryRecordStateTransitions::test_active_to_deleted PASSED [ 56%]
+tests/unit/test_memory_record.py::TestMemoryRecordStateTransitions::test_stale_to_active_reactivation PASSED [ 57%]
+tests/unit/test_memory_record.py::TestMemoryRecordStateTransitions::test_archived_to_active_reactivation PASSED [ 58%]
+tests/unit/test_memory_record.py::TestMemoryRecordStateTransitions::test_deleted_is_terminal PASSED [ 59%]
+tests/unit/test_memory_record.py::TestMemoryRecordStateTransitions::test_deleted_to_stale_invalid PASSED [ 60%]
+tests/unit/test_memory_record.py::TestMemoryRecordSerialization::test_to_storage_dict PASSED [ 62%]
+tests/unit/test_memory_record.py::TestMemoryRecordSerialization::test_serialization_roundtrip PASSED [ 63%]
+tests/unit/test_memory_record.py::TestMemoryRecordSerialization::test_empty_goal_tags_roundtrip PASSED [ 64%]
+tests/unit/test_memory_record.py::TestMemoryRecordSerialization::test_repr PASSED [ 65%]
+tests/unit/test_ranker_and_consolidation.py::TestMultiSignalRanker::test_ranking_order PASSED [ 67%]
+tests/unit/test_ranker_and_consolidation.py::TestMultiSignalRanker::test_score_breakdown_present PASSED [ 68%]
+tests/unit/test_ranker_and_consolidation.py::TestMultiSignalRanker::test_top_k_limits_results PASSED [ 69%]
+tests/unit/test_ranker_and_consolidation.py::TestMultiSignalRanker::test_empty_candidates PASSED [ 70%]
+tests/unit/test_ranker_and_consolidation.py::TestMultiSignalRanker::test_mismatched_lengths_raises PASSED [ 71%]
+tests/unit/test_ranker_and_consolidation.py::TestConsolidationPolicy::test_selects_moderate_utility PASSED [ 73%]
+tests/unit/test_ranker_and_consolidation.py::TestConsolidationPolicy::test_excludes_already_consolidated PASSED [ 74%]
+tests/unit/test_ranker_and_consolidation.py::TestConsolidationPolicy::test_excludes_deleted_memories PASSED [ 75%]
+tests/unit/test_ranker_and_consolidation.py::TestConsolidationPolicy::test_should_consolidate_at_interval PASSED [ 76%]
+tests/unit/test_utility_predictor.py::TestFeatureExtraction::test_recency_score_new_memory PASSED [ 78%]
+tests/unit/test_utility_predictor.py::TestFeatureExtraction::test_access_frequency_zero PASSED [ 79%]
+tests/unit/test_utility_predictor.py::TestFeatureExtraction::test_access_frequency_increases_with_count PASSED [ 80%]
+tests/unit/test_utility_predictor.py::TestFeatureExtraction::test_source_type_priors PASSED [ 81%]
+tests/unit/test_utility_predictor.py::TestFeatureExtraction::test_entity_overlap_no_goals PASSED [ 82%]
+tests/unit/test_utility_predictor.py::TestFeatureExtraction::test_entity_extraction PASSED [ 84%]
+tests/unit/test_utility_predictor.py::TestHeuristicScorer::test_default_weights_sum_to_one PASSED [ 85%]
+tests/unit/test_utility_predictor.py::TestHeuristicScorer::test_score_in_valid_range PASSED [ 86%]
+tests/unit/test_utility_predictor.py::TestHeuristicScorer::test_score_with_all_ones PASSED [ 87%]
+tests/unit/test_utility_predictor.py::TestHeuristicScorer::test_score_with_all_zeros PASSED [ 89%]
+tests/unit/test_utility_predictor.py::TestHeuristicScorer::test_mismatched_features_raises PASSED [ 90%]
+tests/unit/test_utility_predictor.py::TestHeuristicScorer::test_score_with_breakdown PASSED [ 91%]
+tests/unit/test_utility_predictor.py::TestLearnedScoringModel::test_untrained_model_fallback FAILED [ 92%]
+tests/unit/test_utility_predictor.py::TestLearnedScoringModel::test_add_training_example PASSED [ 93%]
+tests/unit/test_utility_predictor.py::TestLearnedScoringModel::test_training_with_insufficient_data PASSED [ 95%]
+tests/unit/test_utility_predictor.py::TestLearnedScoringModel::test_training_with_sufficient_data PASSED [ 96%]
+tests/unit/test_utility_predictor.py::TestUtilityDecay::test_high_utility_decays_slowly PASSED [ 97%]
+tests/unit/test_utility_predictor.py::TestUtilityDecay::test_decay_timeline_monotonically_decreasing PASSED [ 98%]
+tests/unit/test_utility_predictor.py::TestUtilityDecay::test_ebbinghaus_vs_famm_decay PASSED [100%]
+
+=================================== FAILURES ===================================
+____________ TestLearnedScoringModel.test_untrained_model_fallback _____________
+tests/unit/test_utility_predictor.py:134: in test_untrained_model_fallback
+    assert score == pytest.approx(0.4)
+E   assert 0.0 == 0.4 ± 4.0e-07
+E     
+E     comparison failed
+E     Obtained: 0.0
+E     Expected: 0.4 ± 4.0e-07
+=========================== short test summary info ============================
+FAILED tests/unit/test_utility_predictor.py::TestLearnedScoringModel::test_untrained_model_fallback - assert 0.0 == 0.4 ± 4.0e-07
+  
+  comparison failed
+  Obtained: 0.0
+  Expected: 0.4 ± 4.0e-07
+======================== 1 failed, 81 passed in 52.56s =========================

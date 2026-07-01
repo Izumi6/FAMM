@@ -1,0 +1,8 @@
+Generating dataset...
+Model                | CV MSE (Train)  | Test MSE   | Latency (ms)
+-----------------------------------------------------------------
+Small MLP            | 0.002642        | 0.002746   | 0.0001      
+Random Forest        | 0.003236        | 0.003318   | 0.0094      
+Gradient Boosting    | 0.002907        | 0.002931   | 0.0026      
+Linear (Ridge)       | 0.002544        | 0.002663   | 0.0000      
+Saved plot to experiments/figures/fig7_model_search.png
