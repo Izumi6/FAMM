@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data & Models
+datasets/raw/*
+!datasets/raw/.gitkeep
+*.bin
+*.pt
+*.pth
+*.onnx
+
+# ChromaDB persistence
+chroma_data/
+
+# Experiment outputs (large files)
+experiments/results/*.json
+experiments/results/*.csv
+experiments/logs/*.log
+
+# Keep directory structure
+!experiments/results/.gitkeep
+!experiments/logs/.gitkeep
+!experiments/figures/.gitkeep
+
+# Secrets
+.env
+*.key

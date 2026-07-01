@@ -1,0 +1,109 @@
+# FAMM Configuration
+# All parameters for the framework, organized by module.
+
+# ─────────────────────────────────────────────
+# Embedding Configuration
+# ─────────────────────────────────────────────
+embedding:
+  model_name: "all-MiniLM-L6-v2"
+  # Dimension is determined by the model; 384 for all-MiniLM-L6-v2
+  device: "cpu"
+  batch_size: 32
+  normalize: true
+
+# ─────────────────────────────────────────────
+# Vector Database Configuration
+# ─────────────────────────────────────────────
+vector_db:
+  # Options: "chroma" | "faiss"
+  backend: "chroma"
+  chroma:
+    persist_directory: "./chroma_data"
+    collection_name: "famm_memories"
+  faiss:
+    index_type: "FlatIP"  # Inner product (use with normalized embeddings)
+    persist_directory: "./faiss_data"
+
+# ─────────────────────────────────────────────
+# Memory Engine Configuration
+# ─────────────────────────────────────────────
+memory_engine:
+  # Maximum number of memories before triggering consolidation
+  max_memories: 10000
+  # Lifecycle states: active → stale → archived → deleted
+  stale_threshold_days: 30
+  archive_threshold_days: 90
+
+# ─────────────────────────────────────────────
+# Future Utility Predictor Configuration
+# ─────────────────────────────────────────────
+future_utility_predictor:
+  # Scoring mode: "heuristic" | "learned"
+  mode: "heuristic"
+  heuristic:
+    # Weights for heuristic scoring (must sum to 1.0)
+    weight_goal_similarity: 0.35
+    weight_recency: 0.20
+    weight_access_frequency: 0.15
+    weight_source_type: 0.15
+    weight_entity_overlap: 0.15
+  learned:
+    model_path: "./models/utility_scorer.pkl"
+    retrain_interval_steps: 500
+
+# ─────────────────────────────────────────────
+# Goal-Aware Retrieval Configuration
+# ─────────────────────────────────────────────
+goal_retrieval:
+  # Number of candidates from vector search
+  top_k_candidates: 50
+  # Final results after reranking
+  top_k_results: 10
+  # Weights for multi-signal ranking
+  ranking_weights:
+    semantic_similarity: 0.30
+    utility_score: 0.25
+    goal_alignment: 0.30
+    recency: 0.15
+  # Whether to use LLM-based reranking on top candidates
+  use_llm_reranker: false
+
+# ─────────────────────────────────────────────
+# Forgetting Engine Configuration
+# ─────────────────────────────────────────────
+forgetting_engine:
+  # Decay cycle interval (in agent interaction steps)
+  decay_interval_steps: 10
+  # Base decay rate per cycle (before utility adjustment)
+  base_decay_rate: 0.05
+  # Minimum utility score before pruning
+  prune_threshold: 0.05
+  # Utility-conditioned decay: decay_rate = base_decay_rate * (1 - utility_score)^exponent
+  utility_exponent: 2.0
+  # Whether to archive before permanent deletion
+  archive_before_delete: true
+
+# ─────────────────────────────────────────────
+# Adaptive Memory Consolidation Configuration
+# ─────────────────────────────────────────────
+consolidation:
+  # Consolidation cycle interval (in agent interaction steps)
+  consolidation_interval_steps: 50
+  # Minimum cluster size to trigger consolidation
+  min_cluster_size: 3
+  # Similarity threshold for clustering
+  cluster_similarity_threshold: 0.75
+  # Summarization mode: "extractive" | "llm"
+  summarization_mode: "extractive"
+  llm:
+    model_name: "gemma2:2b"
+    base_url: "http://localhost:11434"
+
+# ─────────────────────────────────────────────
+# Experiment Configuration
+# ─────────────────────────────────────────────
+experiment:
+  seed: 42
+  results_dir: "./experiments/results"
+  logs_dir: "./experiments/logs"
+  figures_dir: "./experiments/figures"
