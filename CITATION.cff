@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: ""
+    given-names: "Suyash"
+title: "FAMM: Future-Aware Adaptive Memory Management Framework"
+version: 1.0.0
+date-released: 2026-07-01
+url: "https://github.com/Izumi6/FAMM"
+preferred-citation:
+  type: article
+  authors:
+    - family-names: ""
+      given-names: "Suyash"
+  title: "Future-Aware Adaptive Memory Management Framework for Long-Term Autonomous LLM Agents"
+  year: 2026

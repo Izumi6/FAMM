@@ -1,0 +1,334 @@
+{
+  "experiment_timestamp": "2026-07-01T11:38:11.342599+00:00",
+  "num_systems": 5,
+  "scenario": "synthetic_research_agent",
+  "results": [
+    {
+      "system_name": "FAMM",
+      "metrics": {
+        "mean_precision@10": 0.22,
+        "mean_recall@10": 1.0,
+        "mean_f1@10": 0.3543,
+        "mean_ndcg@10": 0.713,
+        "total_records_after": 12,
+        "total_time_seconds": 6.19
+      },
+      "per_query_metrics": [
+        {
+          "query": "What are the key findings about memory decay in ou",
+          "precision@10": 0.3,
+          "recall@10": 1.0,
+          "f1@10": 0.4615,
+          "ndcg@10": 0.9469,
+          "memory_efficiency": 1.0,
+          "utility_retention": 0.3164
+        },
+        {
+          "query": "What should the methodology section include?",
+          "precision@10": 0.3,
+          "recall@10": 1.0,
+          "f1@10": 0.4615,
+          "ndcg@10": 0.8711,
+          "memory_efficiency": 1.0,
+          "utility_retention": 0.3164
+        },
+        {
+          "query": "What tools are we using for the implementation?",
+          "precision@10": 0.2,
+          "recall@10": 1.0,
+          "f1@10": 0.3333,
+          "ndcg@10": 0.4228,
+          "memory_efficiency": 1.0,
+          "utility_retention": 0.3164
+        },
+        {
+          "query": "How does MemGPT manage memory?",
+          "precision@10": 0.1,
+          "recall@10": 1.0,
+          "f1@10": 0.1818,
+          "ndcg@10": 0.6309,
+          "memory_efficiency": 1.0,
+          "utility_retention": 0.3164
+        },
+        {
+          "query": "What experiments should we run for evaluation?",
+          "precision@10": 0.2,
+          "recall@10": 1.0,
+          "f1@10": 0.3333,
+          "ndcg@10": 0.6934,
+          "memory_efficiency": 1.0,
+          "utility_retention": 0.3164
+        }
+      ],
+      "total_time_seconds": 6.19,
+      "memory_stats": {
+        "total_records": 12,
+        "cached_records": 12,
+        "step_count": 50,
+        "average_utility": 0.2845,
+        "state_distribution": {
+          "active": 12
+        },
+        "events_published": 67,
+        "system": "FAMM"
+      }
+    },
+    {
+      "system_name": "NaiveFIFO",
+      "metrics": {
+        "mean_precision@10": 0.2,
+        "mean_recall@10": 0.9333,
+        "mean_f1@10": 0.3235,
+        "mean_ndcg@10": 0.8493,
+        "total_records_after": 12,
+        "total_time_seconds": 0.08
+      },
+      "per_query_metrics": [
+        {
+          "query": "What are the key findings about memory decay in ou",
+          "precision@10": 0.3,
+          "recall@10": 1.0,
+          "f1@10": 0.4615,
+          "ndcg@10": 0.906,
+          "memory_efficiency": 1.0,
+          "utility_retention": 0.5
+        },
+        {
+          "query": "What should the methodology section include?",
+          "precision@10": 0.2,
+          "recall@10": 0.6667,
+          "f1@10": 0.3077,
+          "ndcg@10": 0.4632,
+          "memory_efficiency": 1.0,
+          "utility_retention": 0.5
+        },
+        {
+          "query": "What tools are we using for the implementation?",
+          "precision@10": 0.2,
+          "recall@10": 1.0,
+          "f1@10": 0.3333,
+          "ndcg@10": 0.8772,
+          "memory_efficiency": 1.0,
+          "utility_retention": 0.5
+        },
+        {
+          "query": "How does MemGPT manage memory?",
+          "precision@10": 0.1,
+          "recall@10": 1.0,
+          "f1@10": 0.1818,
+          "ndcg@10": 1.0,
+          "memory_efficiency": 1.0,
+          "utility_retention": 0.5
+        },
+        {
+          "query": "What experiments should we run for evaluation?",
+          "precision@10": 0.2,
+          "recall@10": 1.0,
+          "f1@10": 0.3333,
+          "ndcg@10": 1.0,
+          "memory_efficiency": 1.0,
+          "utility_retention": 0.5
+        }
+      ],
+      "total_time_seconds": 0.08,
+      "memory_stats": {
+        "total_records": 12,
+        "step_count": 50,
+        "system": "NaiveFIFO"
+      }
+    },
+    {
+      "system_name": "SimilarityOnly",
+      "metrics": {
+        "mean_precision@10": 0.2,
+        "mean_recall@10": 0.9333,
+        "mean_f1@10": 0.3235,
+        "mean_ndcg@10": 0.8493,
+        "total_records_after": 12,
+        "total_time_seconds": 0.08
+      },
+      "per_query_metrics": [
+        {
+          "query": "What are the key findings about memory decay in ou",
+          "precision@10": 0.3,
+          "recall@10": 1.0,
+          "f1@10": 0.4615,
+          "ndcg@10": 0.906,
+          "memory_efficiency": 1.0,
+          "utility_retention": 0.5
+        },
+        {
+          "query": "What should the methodology section include?",
+          "precision@10": 0.2,
+          "recall@10": 0.6667,
+          "f1@10": 0.3077,
+          "ndcg@10": 0.4632,
+          "memory_efficiency": 1.0,
+          "utility_retention": 0.5
+        },
+        {
+          "query": "What tools are we using for the implementation?",
+          "precision@10": 0.2,
+          "recall@10": 1.0,
+          "f1@10": 0.3333,
+          "ndcg@10": 0.8772,
+          "memory_efficiency": 1.0,
+          "utility_retention": 0.5
+        },
+        {
+          "query": "How does MemGPT manage memory?",
+          "precision@10": 0.1,
+          "recall@10": 1.0,
+          "f1@10": 0.1818,
+          "ndcg@10": 1.0,
+          "memory_efficiency": 1.0,
+          "utility_retention": 0.5
+        },
+        {
+          "query": "What experiments should we run for evaluation?",
+          "precision@10": 0.2,
+          "recall@10": 1.0,
+          "f1@10": 0.3333,
+          "ndcg@10": 1.0,
+          "memory_efficiency": 1.0,
+          "utility_retention": 0.5
+        }
+      ],
+      "total_time_seconds": 0.08,
+      "memory_stats": {
+        "total_records": 12,
+        "step_count": 50,
+        "system": "SimilarityOnly"
+      }
+    },
+    {
+      "system_name": "ImportanceScoring",
+      "metrics": {
+        "mean_precision@10": 0.22,
+        "mean_recall@10": 1.0,
+        "mean_f1@10": 0.3543,
+        "mean_ndcg@10": 0.9181,
+        "total_records_after": 12,
+        "total_time_seconds": 0.08
+      },
+      "per_query_metrics": [
+        {
+          "query": "What are the key findings about memory decay in ou",
+          "precision@10": 0.3,
+          "recall@10": 1.0,
+          "f1@10": 0.4615,
+          "ndcg@10": 0.906,
+          "memory_efficiency": 1.0,
+          "utility_retention": 0.452
+        },
+        {
+          "query": "What should the methodology section include?",
+          "precision@10": 0.3,
+          "recall@10": 1.0,
+          "f1@10": 0.4615,
+          "ndcg@10": 0.8072,
+          "memory_efficiency": 1.0,
+          "utility_retention": 0.454
+        },
+        {
+          "query": "What tools are we using for the implementation?",
+          "precision@10": 0.2,
+          "recall@10": 1.0,
+          "f1@10": 0.3333,
+          "ndcg@10": 0.8772,
+          "memory_efficiency": 1.0,
+          "utility_retention": 0.451
+        },
+        {
+          "query": "How does MemGPT manage memory?",
+          "precision@10": 0.1,
+          "recall@10": 1.0,
+          "f1@10": 0.1818,
+          "ndcg@10": 1.0,
+          "memory_efficiency": 1.0,
+          "utility_retention": 0.452
+        },
+        {
+          "query": "What experiments should we run for evaluation?",
+          "precision@10": 0.2,
+          "recall@10": 1.0,
+          "f1@10": 0.3333,
+          "ndcg@10": 1.0,
+          "memory_efficiency": 1.0,
+          "utility_retention": 0.452
+        }
+      ],
+      "total_time_seconds": 0.08,
+      "memory_stats": {
+        "total_records": 12,
+        "step_count": 50,
+        "system": "ImportanceScoring"
+      }
+    },
+    {
+      "system_name": "EbbinghausDecay",
+      "metrics": {
+        "mean_precision@10": 0.2,
+        "mean_recall@10": 0.9333,
+        "mean_f1@10": 0.3235,
+        "mean_ndcg@10": 0.8493,
+        "total_records_after": 12,
+        "total_time_seconds": 0.08
+      },
+      "per_query_metrics": [
+        {
+          "query": "What are the key findings about memory decay in ou",
+          "precision@10": 0.3,
+          "recall@10": 1.0,
+          "f1@10": 0.4615,
+          "ndcg@10": 0.906,
+          "memory_efficiency": 1.0,
+          "utility_retention": 1.0
+        },
+        {
+          "query": "What should the methodology section include?",
+          "precision@10": 0.2,
+          "recall@10": 0.6667,
+          "f1@10": 0.3077,
+          "ndcg@10": 0.4632,
+          "memory_efficiency": 1.0,
+          "utility_retention": 1.0
+        },
+        {
+          "query": "What tools are we using for the implementation?",
+          "precision@10": 0.2,
+          "recall@10": 1.0,
+          "f1@10": 0.3333,
+          "ndcg@10": 0.8772,
+          "memory_efficiency": 1.0,
+          "utility_retention": 1.0
+        },
+        {
+          "query": "How does MemGPT manage memory?",
+          "precision@10": 0.1,
+          "recall@10": 1.0,
+          "f1@10": 0.1818,
+          "ndcg@10": 1.0,
+          "memory_efficiency": 1.0,
+          "utility_retention": 1.0
+        },
+        {
+          "query": "What experiments should we run for evaluation?",
+          "precision@10": 0.2,
+          "recall@10": 1.0,
+          "f1@10": 0.3333,
+          "ndcg@10": 1.0,
+          "memory_efficiency": 1.0,
+          "utility_retention": 1.0
+        }
+      ],
+      "total_time_seconds": 0.08,
+      "memory_stats": {
+        "total_records": 12,
+        "cached_records": 12,
+        "step_count": 50,
+        "system": "EbbinghausDecay"
+      }
+    }
+  ]
+}

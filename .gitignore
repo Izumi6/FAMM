@@ -36,8 +36,8 @@ datasets/raw/*
 chroma_data/
 
 # Experiment outputs (large files)
-experiments/results/*.json
-experiments/results/*.csv
+# experiments/results/*.json
+# experiments/results/*.csv
 experiments/logs/*.log
 
 # Keep directory structure

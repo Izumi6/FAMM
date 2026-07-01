@@ -1,0 +1,311 @@
+{
+  "scaled_experiment": {
+    "FAMM": {
+      "What is FAMM's approach to memory manage": {
+        "p@10": 0.2,
+        "r@10": 0.5,
+        "f1": 0.2857,
+        "ndcg": 0.5856
+      },
+      "How does the forgetting mechanism work?": {
+        "p@10": 0.2,
+        "r@10": 0.4,
+        "f1": 0.2667,
+        "ndcg": 0.4704
+      },
+      "What are the experimental results?": {
+        "p@10": 0.2,
+        "r@10": 0.4,
+        "f1": 0.2667,
+        "ndcg": 0.4704
+      },
+      "Describe the evaluation methodology.": {
+        "p@10": 0.3,
+        "r@10": 1.0,
+        "f1": 0.4615,
+        "ndcg": 0.8278
+      },
+      "How does goal-aware retrieval differ fro": {
+        "p@10": 0.0,
+        "r@10": 0.0,
+        "f1": 0.0,
+        "ndcg": 0.0
+      },
+      "What implementation technologies are use": {
+        "p@10": 0.0,
+        "r@10": 0.0,
+        "f1": 0.0,
+        "ndcg": 0.0
+      },
+      "Explain the memory lifecycle states.": {
+        "p@10": 0.1,
+        "r@10": 0.5,
+        "f1": 0.1667,
+        "ndcg": 0.2641
+      },
+      "What baselines are compared against FAMM": {
+        "p@10": 0.0,
+        "r@10": 0.0,
+        "f1": 0.0,
+        "ndcg": 0.0
+      },
+      "How is the utility predictor trained?": {
+        "p@10": 0.2,
+        "r@10": 0.6667,
+        "f1": 0.3077,
+        "ndcg": 0.5307
+      },
+      "What is the consolidation strategy?": {
+        "p@10": 0.2,
+        "r@10": 1.0,
+        "f1": 0.3333,
+        "ndcg": 1.0
+      }
+    },
+    "SimilarityOnly": {
+      "What is FAMM's approach to memory manage": {
+        "p@10": 0.2,
+        "r@10": 0.5,
+        "f1": 0.2857,
+        "ndcg": 0.6367
+      },
+      "How does the forgetting mechanism work?": {
+        "p@10": 0.2,
+        "r@10": 0.4,
+        "f1": 0.2667,
+        "ndcg": 0.5531
+      },
+      "What are the experimental results?": {
+        "p@10": 0.3,
+        "r@10": 0.6,
+        "f1": 0.4,
+        "ndcg": 0.5834
+      },
+      "Describe the evaluation methodology.": {
+        "p@10": 0.3,
+        "r@10": 1.0,
+        "f1": 0.4615,
+        "ndcg": 0.9134
+      },
+      "How does goal-aware retrieval differ fro": {
+        "p@10": 0.3,
+        "r@10": 0.75,
+        "f1": 0.4286,
+        "ndcg": 0.6589
+      },
+      "What implementation technologies are use": {
+        "p@10": 0.0,
+        "r@10": 0.0,
+        "f1": 0.0,
+        "ndcg": 0.0
+      },
+      "Explain the memory lifecycle states.": {
+        "p@10": 0.1,
+        "r@10": 0.5,
+        "f1": 0.1667,
+        "ndcg": 0.6131
+      },
+      "What baselines are compared against FAMM": {
+        "p@10": 0.0,
+        "r@10": 0.0,
+        "f1": 0.0,
+        "ndcg": 0.0
+      },
+      "How is the utility predictor trained?": {
+        "p@10": 0.3,
+        "r@10": 1.0,
+        "f1": 0.4615,
+        "ndcg": 0.5726
+      },
+      "What is the consolidation strategy?": {
+        "p@10": 0.2,
+        "r@10": 1.0,
+        "f1": 0.3333,
+        "ndcg": 0.9197
+      }
+    },
+    "ImportanceScoring": {
+      "What is FAMM's approach to memory manage": {
+        "p@10": 0.2,
+        "r@10": 0.5,
+        "f1": 0.2857,
+        "ndcg": 0.5856
+      },
+      "How does the forgetting mechanism work?": {
+        "p@10": 0.2,
+        "r@10": 0.4,
+        "f1": 0.2667,
+        "ndcg": 0.5531
+      },
+      "What are the experimental results?": {
+        "p@10": 0.3,
+        "r@10": 0.6,
+        "f1": 0.4,
+        "ndcg": 0.6164
+      },
+      "Describe the evaluation methodology.": {
+        "p@10": 0.3,
+        "r@10": 1.0,
+        "f1": 0.4615,
+        "ndcg": 0.9134
+      },
+      "How does goal-aware retrieval differ fro": {
+        "p@10": 0.3,
+        "r@10": 0.75,
+        "f1": 0.4286,
+        "ndcg": 0.6526
+      },
+      "What implementation technologies are use": {
+        "p@10": 0.0,
+        "r@10": 0.0,
+        "f1": 0.0,
+        "ndcg": 0.0
+      },
+      "Explain the memory lifecycle states.": {
+        "p@10": 0.1,
+        "r@10": 0.5,
+        "f1": 0.1667,
+        "ndcg": 0.6131
+      },
+      "What baselines are compared against FAMM": {
+        "p@10": 0.0,
+        "r@10": 0.0,
+        "f1": 0.0,
+        "ndcg": 0.0
+      },
+      "How is the utility predictor trained?": {
+        "p@10": 0.3,
+        "r@10": 1.0,
+        "f1": 0.4615,
+        "ndcg": 0.6197
+      },
+      "What is the consolidation strategy?": {
+        "p@10": 0.2,
+        "r@10": 1.0,
+        "f1": 0.3333,
+        "ndcg": 0.9197
+      }
+    },
+    "EbbinghausDecay": {
+      "What is FAMM's approach to memory manage": {
+        "p@10": 0.2,
+        "r@10": 0.5,
+        "f1": 0.2857,
+        "ndcg": 0.6367
+      },
+      "How does the forgetting mechanism work?": {
+        "p@10": 0.2,
+        "r@10": 0.4,
+        "f1": 0.2667,
+        "ndcg": 0.5531
+      },
+      "What are the experimental results?": {
+        "p@10": 0.3,
+        "r@10": 0.6,
+        "f1": 0.4,
+        "ndcg": 0.5834
+      },
+      "Describe the evaluation methodology.": {
+        "p@10": 0.3,
+        "r@10": 1.0,
+        "f1": 0.4615,
+        "ndcg": 0.9134
+      },
+      "How does goal-aware retrieval differ fro": {
+        "p@10": 0.3,
+        "r@10": 0.75,
+        "f1": 0.4286,
+        "ndcg": 0.6589
+      },
+      "What implementation technologies are use": {
+        "p@10": 0.0,
+        "r@10": 0.0,
+        "f1": 0.0,
+        "ndcg": 0.0
+      },
+      "Explain the memory lifecycle states.": {
+        "p@10": 0.1,
+        "r@10": 0.5,
+        "f1": 0.1667,
+        "ndcg": 0.6131
+      },
+      "What baselines are compared against FAMM": {
+        "p@10": 0.0,
+        "r@10": 0.0,
+        "f1": 0.0,
+        "ndcg": 0.0
+      },
+      "How is the utility predictor trained?": {
+        "p@10": 0.3,
+        "r@10": 1.0,
+        "f1": 0.4615,
+        "ndcg": 0.5726
+      },
+      "What is the consolidation strategy?": {
+        "p@10": 0.2,
+        "r@10": 1.0,
+        "f1": 0.3333,
+        "ndcg": 0.9197
+      }
+    }
+  },
+  "scaled_aggregated": {
+    "FAMM": {
+      "P@10": 0.14,
+      "R@10": 0.4467,
+      "F1@10": 0.2088,
+      "NDCG@10": 0.4149
+    },
+    "SimilarityOnly": {
+      "P@10": 0.19,
+      "R@10": 0.575,
+      "F1@10": 0.2804,
+      "NDCG@10": 0.5451
+    },
+    "ImportanceScoring": {
+      "P@10": 0.19,
+      "R@10": 0.575,
+      "F1@10": 0.2804,
+      "NDCG@10": 0.5474
+    },
+    "EbbinghausDecay": {
+      "P@10": 0.19,
+      "R@10": 0.575,
+      "F1@10": 0.2804,
+      "NDCG@10": 0.5451
+    }
+  },
+  "ablation": {
+    "FAMM (Full)": {
+      "P@10": 0.18,
+      "R@10": 0.5417,
+      "F1@10": 0.265,
+      "NDCG@10": 0.451
+    },
+    "\u2013 No Utility Predictor": {
+      "P@10": 0.17,
+      "R@10": 0.5167,
+      "F1@10": 0.2507,
+      "NDCG@10": 0.4649
+    },
+    "\u2013 No Goal Retrieval": {
+      "P@10": 0.19,
+      "R@10": 0.575,
+      "F1@10": 0.2804,
+      "NDCG@10": 0.5451
+    },
+    "\u2013 No Adaptive Decay": {
+      "P@10": 0.18,
+      "R@10": 0.5417,
+      "F1@10": 0.265,
+      "NDCG@10": 0.4536
+    },
+    "\u2013 None (Similarity Only)": {
+      "P@10": 0.19,
+      "R@10": 0.575,
+      "F1@10": 0.2804,
+      "NDCG@10": 0.5451
+    }
+  },
+  "timestamp": "2026-07-01T12:34:36.896176+00:00"
+}
