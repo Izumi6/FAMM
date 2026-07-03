@@ -1,16 +1,27 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
 authors:
-  - family-names: ""
+  - family-names: "Vakhariya"
     given-names: "Suyash"
-title: "FAMM: Future-Aware Adaptive Memory Management Framework"
+    affiliation: "Department of Computer Engineering, PDEA College of Engineering, Savitribai Phule Pune University"
+    email: "vakhariyasuyash@gmail.com"
+  - family-names: "Ipper"
+    given-names: "Asmita"
+    affiliation: "Department of Computer Engineering, PDEA College of Engineering, Savitribai Phule Pune University"
+    email: "asmitaipper@gmail.com"
+title: "FAMM: Future-Aware Adaptive Memory Management Framework for Long-Term Autonomous LLM Agents"
 version: 1.0.0
-date-released: 2026-07-01
-url: "https://github.com/Izumi6/FAMM"
+doi: 10.5281/zenodo.21168000
+date-released: 2026-07-03
+url: "https://github.com/vakhariyasuyash/FAMM"
 preferred-citation:
   type: article
   authors:
-    - family-names: ""
+    - family-names: "Vakhariya"
       given-names: "Suyash"
-  title: "Future-Aware Adaptive Memory Management Framework for Long-Term Autonomous LLM Agents"
+    - family-names: "Ipper"
+      given-names: "Asmita"
+  title: "FAMM: Future-Aware Adaptive Memory Management Framework for Long-Term Autonomous LLM Agents"
+  journal: "IEEE"
   year: 2026
+  doi: 10.5281/zenodo.21168000

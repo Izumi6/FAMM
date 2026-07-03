@@ -1,0 +1,48 @@
+\appendices
+\section{System Hyperparameters and Configuration}
+
+Table~\ref{tab:hyperparams} details the exact configuration used for all experiments reported in this paper.
+
+\begin{table}[h]
+\caption{Complete FAMM System Hyperparameters}
+\label{tab:hyperparams}
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+\textbf{Parameter} & \textbf{Value} \\
+\midrule
+Embedding Model & \texttt{all-MiniLM-L6-v2} \\
+Embedding Dimensions & 384 \\
+Distance Metric & L2 (Euclidean) \\
+HNSW $M$ parameter & 16 \\
+HNSW ef\_construction & 200 \\
+Inference Device & CPU \\
+\midrule
+Scorer Mode & Heuristic (weighted sum) \\
+Features & Goal Sim, Recency, Freq, \\
+ & Source Prior, Entity Overlap \\
+Feature Dimensionality $p$ & 5 \\
+Weights $\mathbf{w}$ & $[0.35, 0.20, 0.15, 0.15, 0.15]$ \\
+\midrule
+Base Decay Rate ($\lambda_{base}$) & 0.05 \\
+Utility Exponent ($\kappa$) & 2.0 \\
+Prune Threshold ($\theta$) & 0.05 \\
+\midrule
+Semantic Weight ($w_s$) & 0.30 \\
+Utility Weight ($w_u$) & 0.25 \\
+Goal Alignment Weight ($w_g$) & 0.30 \\
+Recency Weight ($w_r$) & 0.15 \\
+\midrule
+Consolidation Threshold ($\tau$) & 0.75 (combined metric) \\
+Combined Metric & $0.7 \cdot \text{cosine} + 0.3 \cdot \text{Jaccard}$ \\
+Minimum Cluster Size & 3 \\
+Consolidation Interval & Every 50 steps \\
+\midrule
+Evaluation Scales $N$ & 1,000 / 5,000 / 10,000 \\
+Queries per Scale & 10 \\
+Top-$k$ Retrieval & $k = 10$ \\
+Random Seeds & 42, 100 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}

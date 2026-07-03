@@ -4,6 +4,7 @@
 
 [![Python 3.11+](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://python.org)
 [![Tests](https://img.shields.io/badge/Tests-82%20passing-brightgreen.svg)]()
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21168000.svg)](https://doi.org/10.5281/zenodo.21168000)
 [![License](https://img.shields.io/badge/License-Research-orange.svg)]()
 
 ## Abstract
@@ -133,10 +134,13 @@ FAMM IEEE/
 
 ```bibtex
 @article{famm2026,
+  author={Vakhariya, Suyash and Ipper, Asmita},
   title={FAMM: Future-Aware Adaptive Memory Management Framework 
          for Long-Term Autonomous LLM Agents},
   year={2026},
-  note={Under review}
+  doi={10.5281/zenodo.21168000},
+  url={https://doi.org/10.5281/zenodo.21168000},
+  publisher={Zenodo}
 }
 ```
 

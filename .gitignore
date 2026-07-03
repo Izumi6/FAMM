@@ -48,3 +48,16 @@ experiments/logs/*.log
 # Secrets
 .env
 *.key
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.toc
+missfont.log
+
