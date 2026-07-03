@@ -61,3 +61,9 @@ experiments/logs/*.log
 *.toc
 missfont.log
 
+
+# Experiment logs and duplicate figures
+experiments/results/logs/
+experiments/figures/*.pdf
+experiments/figures/*.png
+experiments/results/synthetic_*.json
